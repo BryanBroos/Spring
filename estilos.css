@@ -3,12 +3,10 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  /* Asegura que el cuerpo ocupe toda la altura de la ventana */
   display: flex;
   align-items: center;
-  /* Centra verticalmente los elementos en el cuerpo */
   justify-content: center;
-  /* Centra horizontalmente los elementos en el cuerpo */
+  overflow: auto;
 }
 
 .flower {
