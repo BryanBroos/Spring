@@ -1,0 +1,407 @@
+body {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+  display: flex;
+  align-items: center;
+  /* Centra verticalmente los elementos en el cuerpo */
+  justify-content: center;
+  /* Centra horizontalmente los elementos en el cuerpo */
+}
+
+.flower {
+  height: 200px;
+  width: 200px;
+  margin: 20px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  background-color: #000;
+  /* Fondo negro para toda la página */
+
+  /* Agrega una animación de pulsación */
+  animation: pulsate 5s infinite;
+
+}
+
+.text-above,
+.text-below {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  /* Color del texto */
+  font-size: 20px;
+  /* Tamaño del texto */
+}
+
+.text-tiny {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  /* Color del texto */
+  font-size: 13px;
+  /* Tamaño del texto */
+}
+
+.text-above {
+  top: -60px;
+  /* Ajusta la posición vertical del texto arriba de la flor */
+}
+
+.text-below {
+  bottom: -110px;
+  /* Ajusta la posición vertical del texto debajo de la flor */
+}
+
+.text-tiny {
+
+  bottom: -190px;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1.5);
+  }
+
+  50% {
+    transform: scale(1.6);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.mid {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #000, #ff5e00, #000);
+
+  z-index: 4;
+
+  background-size: 5px 5px;
+
+  filter: drop-shadow(0 0 8px #682600);
+}
+
+.Petal1 {
+  position: absolute;
+  left: 40px;
+  z-index: 3;
+
+  width: 120px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #ff5e00, #ffbb00);
+
+  filter: drop-shadow(0 0 5px #e05200);
+}
+
+.Petal1.p1 {
+  transform: rotate(22.5deg);
+}
+
+.Petal1.p2 {
+  transform: rotate(67.5deg);
+}
+
+.Petal1.p3 {
+  transform: rotate(110.5deg);
+}
+
+.Petal1.p4 {
+  transform: rotate(157.5deg);
+}
+
+.Petal2 {
+  position: absolute;
+  left: 0;
+  z-index: 2;
+
+  width: 200px;
+  height: 40px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #ff5e00, #fbd702);
+
+  filter: drop-shadow(0 0 5px #e05200);
+}
+
+.Petal2.p1 {}
+
+.Petal2.p2 {
+  transform: rotate(90deg);
+}
+
+.Petal2.p3 {
+  transform: rotate(45deg);
+}
+
+.Petal2.p4 {
+  transform: rotate(135deg);
+}
+
+.Petal3 {
+  position: absolute;
+  left: 0px;
+  z-index: 1;
+
+  width: 200px;
+  height: 40px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #ff5e00, #fbd702);
+
+  filter: drop-shadow(0 0 2px #fbd702);
+}
+
+.Petal3.p1 {
+  transform: rotate(22.5deg);
+}
+
+.Petal3.p2 {
+  transform: rotate(67.5deg);
+}
+
+.Petal3.p3 {
+  transform: rotate(110.5deg);
+}
+
+.Petal3.p4 {
+  transform: rotate(157.5deg);
+}
+
+
+.stem {
+  position: absolute;
+  top: 150px;
+  bottom: 0;
+  /* Posición en la parte inferior del contenedor de la flor */
+  left: 50%;
+  /* Ajusta la posición horizontal del tallo */
+  transform: translateX(-50%);
+  width: 10px;
+  /* Ancho del tallo */
+  height: 150px;
+  /* Altura del tallo */
+  background-color: green;
+  /* Color del tallo */
+  border-radius: 5px;
+  /* Borde redondeado */
+  z-index: 0;
+  /* Coloca el tallo detrás de las otras partes de la flor */
+
+}
+
+.stem1 {
+  position: absolute;
+  top: 150px;
+  bottom: 0;
+  /* Posición en la parte inferior del contenedor de la flor */
+  left: 50%;
+  /* Ajusta la posición horizontal del tallo */
+  transform: translateX(-50%);
+  width: 10px;
+  /* Ancho del tallo */
+  height: 150px;
+  /* Altura del tallo */
+  background: radial-gradient(circle, rgba(246, 248, 104, 0.829), transparent);
+  /* Agrega un efecto de brillo al tallo */
+  border-radius: 5px;
+  /* Borde redondeado */
+  z-index: 0;
+  /* Coloca el tallo detrás de las otras partes de la flor */
+}
+
+.flower-container {
+  position: relative;
+}
+
+
+
+.flower-image {
+  position: absolute;
+  left: 150%;
+  top: -50%;
+  width: 100px;
+  height: auto;
+  /* Mantiene la proporción de aspecto de las imágenes */
+  filter: drop-shadow(0 0 5px #fff);
+  /* Agrega un efecto de sombra */
+  animation: pulsate 5s infinite;
+}
+
+.flower-image2 {
+  position: absolute;
+  left: 120%;
+  width: 150px;
+  height: auto;
+  /* Mantiene la proporción de aspecto de las imágenes */
+  filter: drop-shadow(0 0 5px #fff);
+  /* Agrega un efecto de sombra */
+  animation: pulsate 5s infinite;
+}
+
+.flower-image3 {
+  position: absolute;
+  left: 250%;
+  width: 100px;
+  /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: auto;
+  /* Mantiene la proporción de aspecto de las imágenes */
+  filter: drop-shadow(0 0 5px #fff);
+  /* Agrega un efecto de sombra */
+  animation: pulsate 5s infinite;
+  /* Agrega una animación de pulsación */
+}
+
+.flower-image4 {
+  position: absolute;
+  left: -200%;
+  top: -40%;
+  width: 150px;
+  /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: auto;
+  /* Mantiene la proporción de aspecto de las imágenes */
+  filter: drop-shadow(0 0 5px #fff);
+  /* Agrega un efecto de sombra */
+  animation: pulsate 5s infinite;
+  /* Agrega una animación de pulsación */
+}
+
+.flower-image5 {
+  position: absolute;
+  left: -200%;
+  width: 100px;
+  /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: auto;
+  /* Mantiene la proporción de aspecto de las imágenes */
+  filter: drop-shadow(0 0 5px #fff);
+  /* Agrega un efecto de sombra */
+  animation: pulsate 5s infinite;
+  /* Agrega una animación de pulsación */
+}
+
+.flower-image6 {
+  position: absolute;
+  left: -100%;
+  top: -50%;
+  width: 100px;
+  /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: auto;
+  /* Mantiene la proporción de aspecto de las imágenes */
+  filter: drop-shadow(0 0 5px #fff);
+  /* Agrega un efecto de sombra */
+  animation: pulsate 5s infinite;
+  /* Agrega una animación de pulsación */
+}
+
+.flower-image7 {
+  position: absolute;
+  left: 300%;
+  top: 30%;
+  width: 100px;
+  /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: auto;
+  /* Mantiene la proporción de aspecto de las imágenes */
+  filter: drop-shadow(0 0 5px #fff);
+  /* Agrega un efecto de sombra */
+  animation: pulsate 5s infinite;
+  /* Agrega una animación de pulsación */
+}
+
+.flower-image8 {
+  position: absolute;
+  left: 300%;
+  top: -40%;
+  width: 100px;
+  /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: auto;
+  /* Mantiene la proporción de aspecto de las imágenes */
+  filter: drop-shadow(0 0 5px #fff);
+  /* Agrega un efecto de sombra */
+  animation: pulsate 5s infinite;
+  /* Agrega una animación de pulsación */
+}
+
+.flower-image9 {
+  position: absolute;
+  left: 20%;
+  top: -60%;
+  width: 100px;
+  /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: auto;
+  /* Mantiene la proporción de aspecto de las imágenes */
+  filter: drop-shadow(0 0 5px #fff);
+  /* Agrega un efecto de sombra */
+  animation: pulsate 5s infinite;
+  /* Agrega una animación de pulsación */
+}
+
+.flower-image10 {
+  position: absolute;
+  left: -200%;
+  top: 30%;
+  width: 100px;
+  /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: auto;
+  /* Mantiene la proporción de aspecto de las imágenes */
+  filter: drop-shadow(0 0 5px #fff);
+  /* Agrega un efecto de sombra */
+  animation: pulsate 5s infinite;
+  /* Agrega una animación de pulsación */
+}
+
+.flower-image11 {
+  position: absolute;
+  left: -100%;
+  top: 80%;
+  width: 100px;
+  /* Ajusta el tamaño de las imágenes según sea necesario */
+  height: auto;
+  /* Mantiene la proporción de aspecto de las imágenes */
+  filter: drop-shadow(0 0 5px #fff);
+  /* Agrega un efecto de sombra */
+  animation: pulsate 5s infinite;
+  /* Agrega una animación de pulsación */
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .flower-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flower {
+    margin-bottom: 20px;
+  }
+
+  #toggleButton {
+    position: static;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

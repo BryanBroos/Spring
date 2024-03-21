@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="Stylesheet" href="estilos.css">
+  <title>Janetcita</title>
+  <link rel="icon" href="2.jpg" type="image/2.jpg">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+
+    #content-container {
+      margin-bottom: 50px;
+    }
+
+    #myAudio {
+      width: 300px;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    #toggleButton {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flower-container">
+    <div class="flower">
+
+      <div class="mid">
+
+      </div>
+
+      <div class="Petal1 p1">
+
+      </div>
+      <div class="Petal1 p2">
+
+      </div>
+      <div class="Petal1 p3">
+
+      </div>
+      <div class="Petal1 p4">
+
+      </div>
+      <div class="Petal2 p1">
+
+      </div>
+      <div class="Petal2 p2">
+
+      </div>
+      <div class="Petal2 p3">
+
+      </div>
+      <div class="Petal2 p4">
+
+      </div>
+      <div class="Petal3 p1">
+
+      </div>
+      <div class="Petal3 p2">
+
+      </div>
+      <div class="Petal3 p3">
+
+      </div>
+      <div class="Petal3 p4">
+
+      </div>
+      <div class="stem"></div>
+      <div class="stem1"></div>
+
+      <div class="text-below">Te quiero muchisímo Janetcita❤. </div>
+      <div class="text-tiny">Te hago esta página de corazoncito, y espero que este inicio de primavera este lleno de
+        muchas cosas bonitas así como tú.</div>
+
+    </div>
+
+    <img class="flower-image" src="image/1.jpg">
+    <img class="flower-image2" src="image/2.jpg">
+    <img class="flower-image3" src="image/3.jpg">
+    <img class="flower-image4" src="image/4.jpg">
+    <img class="flower-image5" src="image/5.jpg">
+    <img class="flower-image6" src="image/6.jpg">
+    <img class="flower-image7" src="image/7.jpg">
+    <img class="flower-image8" src="image/8.jpg">
+    <img class="flower-image9" src="image/9.jpg">
+    <img class="flower-image10" src="image/10.jpg">
+    <img class="flower-image11" src="image/11.jpg">
+
+  </div>
+  <button id="toggleButton">Reproducir / Pausar</button>
+
+  <audio id="myAudio">
+    <source src="audio/humbeAmorDeCine.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+  <script>
+    var audio = document.getElementById("myAudio");
+    var button = document.getElementById("toggleButton");
+
+    // Función para reproducir o pausar la música
+    function toggleAudio() {
+      if (audio.paused) {
+        audio.play(); // Reproduce la música si está pausada
+        button.textContent = "Pausar"; // Cambia el texto del botón a "Pausar"
+      } else {
+        audio.pause(); // Pausa la música si está reproduciéndose
+        button.textContent = "Reproducir"; // Cambia el texto del botón a "Reproducir"
+      }
+    }
+    button.addEventListener("click", toggleAudio);
+  </script>
+
+
+  <script src="efecto.js"></script>
+</body>
+
+</html>
